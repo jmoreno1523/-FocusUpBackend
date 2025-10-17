@@ -4,17 +4,21 @@ const scoreSchema = new mongoose.Schema(
   {
     userId: { 
       type: mongoose.Schema.Types.ObjectId, 
-      ref: "FocusUser", // ✅ referencia al modelo correcto
-      required: false  // Permitimos que sea opcional, para los usuarios invitados
+      ref: "FocusUser",
+      required: false
     },
     guestId: { 
-      type: String, // Usamos un String para almacenar el guestId, que podría ser un UUID u otro identificador único
-      required: false // Solo se asigna si es un invitado
+      type: String,
+      required: false
+    },
+    playerName: { // ✅ ESTE CAMPO ES CRÍTICO
+      type: String,
+      required: false
     },
     game: { 
       type: String, 
       required: true 
-    }, // ejemplo: "reaction" o "focus"
+    },
     score: { 
       type: Number, 
       required: true, 
