@@ -13,12 +13,7 @@ const app = express();
 
 // 🌐 Configuración CORS (versión definitiva)
 app.use(
-  cors({
-    origin: ["https://focus-upfrontend.vercel.app"], // orígenes permitidos
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // incluye OPTIONS
-    allowedHeaders: ["Content-Type", "Authorization"], // cabeceras permitidas
-    credentials: true, // permitir cookies o credenciales
-  })
+  cors()//
 );
 
 // ✅ Maneja las solicitudes preflight (para peticiones POST con headers)
