@@ -45,6 +45,6 @@ connectDB().then(() => {
     console.log("✅ Conectado a MongoDB Atlas");
     console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
     console.log(`📡 Esperando peticiones desde el frontend...`);
-    console.log("🌐 CORS habilitado para http://localhost:5173 y http://localhost:5174");
+    console.log("🌐 CORS habilitado para https://focus-upfrontend.vercel.app");
   });
 });
